@@ -12,19 +12,18 @@ class SignUp extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.all(20),
           decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                Colors.black,
-                Color(0xFFE51313),
-              ],
-              stops: [
-                0.75,
-                1.0,
-              ],
-            ),
-          ),
+              gradient: RadialGradient(
+            colors: [
+              Color(0xFFE51313),
+              Colors.black,
+            ],
+            radius: 0.6,
+            stops: [
+              0.1,
+              1.5,
+            ],
+            center: Alignment.bottomRight,
+          )),
           child: Column(
             children: [
               SizedBox(
@@ -46,10 +45,11 @@ class SignUp extends StatelessWidget {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(33),
                               image: const DecorationImage(
-                                  image: AssetImage(
-                                    'assets/images/marvel.jpg',
-                                  ),
-                                  fit: BoxFit.cover),
+                                image: AssetImage(
+                                  'assets/images/marvel.jpg',
+                                ),
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           ),
                         ],
