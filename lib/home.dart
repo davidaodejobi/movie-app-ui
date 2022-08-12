@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import 'details.dart';
+
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -10,6 +12,7 @@ class Home extends StatelessWidget {
       // backgroundColor: const Color(0xFF171719),
       body: SafeArea(
         child: Container(
+          height: double.infinity,
           padding: const EdgeInsets.all(20),
           decoration: BoxDecoration(
               gradient: RadialGradient(
@@ -109,42 +112,51 @@ class Home extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      Container(
-                        height: 210,
-                        width: 150,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          image: const DecorationImage(
-                            image: AssetImage('assets/images/movie1.jpg'),
-                            fit: BoxFit.cover,
+                      GestureDetector(
+                        onTap: () {},
+                        child: Container(
+                          height: 220,
+                          width: 150,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            image: const DecorationImage(
+                              image: AssetImage('assets/images/movie1.jpg'),
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                       ),
                       const SizedBox(
                         width: 10,
                       ),
-                      Container(
-                        height: 210,
-                        width: 150,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          image: const DecorationImage(
-                            image: AssetImage('assets/images/movie2.jpg'),
-                            fit: BoxFit.cover,
+                      GestureDetector(
+                        onTap: () {},
+                        child: Container(
+                          height: 220,
+                          width: 150,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            image: const DecorationImage(
+                              image: AssetImage('assets/images/movie2.jpg'),
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                       ),
                       const SizedBox(
                         width: 10,
                       ),
-                      Container(
-                        height: 210,
-                        width: 150,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          image: const DecorationImage(
-                            image: AssetImage('assets/images/movie3.jpg'),
-                            fit: BoxFit.cover,
+                      GestureDetector(
+                        onTap: () {},
+                        child: Container(
+                          height: 220,
+                          width: 150,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            image: const DecorationImage(
+                              image: AssetImage('assets/images/movie3.jpg'),
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                       ),
@@ -177,44 +189,60 @@ class Home extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      Container(
-                        height: 210,
-                        width: 150,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          image: const DecorationImage(
-                            image: AssetImage(
-                              'assets/images/movie4.jpg',
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const Details(),
                             ),
-                            fit: BoxFit.cover,
+                          );
+                        },
+                        child: Container(
+                          height: 220,
+                          width: 150,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            image: const DecorationImage(
+                              image: AssetImage(
+                                'assets/images/movie4.jpg',
+                              ),
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                       ),
                       const SizedBox(
                         width: 10,
                       ),
-                      Container(
-                        height: 210,
-                        width: 150,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          image: const DecorationImage(
-                            image: AssetImage('assets/images/movie5.jpg'),
-                            fit: BoxFit.cover,
+                      GestureDetector(
+                        onTap: () {},
+                        child: Container(
+                          height: 220,
+                          width: 150,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            image: const DecorationImage(
+                              image: AssetImage('assets/images/movie5.jpg'),
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                       ),
                       const SizedBox(
                         width: 10,
                       ),
-                      Container(
-                        height: 210,
-                        width: 150,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          image: const DecorationImage(
-                            image: AssetImage('assets/images/movie6.jpg'),
-                            fit: BoxFit.cover,
+                      GestureDetector(
+                        onTap: () {},
+                        child: Container(
+                          height: 220,
+                          width: 150,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            image: const DecorationImage(
+                              image: AssetImage('assets/images/movie6.jpg'),
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                       ),
